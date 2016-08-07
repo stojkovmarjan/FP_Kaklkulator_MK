@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:layout_editor_absoluteX="10dp"
+    tools:layout_editor_absoluteY="143dp"
+    android:background="@color/colorPrimaryLight">
+
+    <!-- DIVAJDER empty big-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Podatoci za pol i godini-->
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:text="Пол"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPol"
+                android:textColor="@color/colorPrimaryText" />
+
+            <Spinner
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/cmbGender"
+                android:layout_weight=".4"
+                android:gravity="center_horizontal|center_vertical"
+                android:entries="@array/gender_arrays"
+                android:prompt="@string/gender_prompt"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/icons" />
+
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:text="Години"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblGodini"
+                android:textColor="@color/colorPrimaryText" />
+
+            <EditText
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:background="@color/icons"
+                android:layout_weight=".4"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtGodini"
+                android:maxLines="1"
+                android:inputType="number"
+                android:hint="n" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dip"></LinearLayout>
+    <!-- LABELI NAD POLINJA -->
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf" >
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_txt_results"
+            android:layout_weight="2"
+            android:text="Дисциплина"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDisciplina" />
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_txt_results"
+            android:layout_weight="1"
+            android:text="Резултат"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblRezultatSklek" />
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_txt_results"
+            android:layout_weight="1"
+            android:text="Бодови"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblBodoviSklek" />
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_txt_results"
+            android:layout_weight="1"
+            android:text="Норма"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNorma" />
+
+    </LinearLayout>
+
+        <!-- DIVAJDER -->
+<LinearLayout
+    android:background="@color/colorDivider"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="1dip"></LinearLayout>
+
+    <!-- Podatoci SKLEKOVI-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="2"
+                android:text="Склекови"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSklek"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <EditText
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@color/icons"
+                android:id="@+id/txtSklek"
+                android:maxLines="1"
+                android:hint="n" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="normal|bold"
+                android:hint="____"
+                android:id="@+id/lblPoeniSklek" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblNormaSklek"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_marginRight="5dip"
+                android:hint="____"
+                android:textStyle="normal|italic" />
+
+        </LinearLayout>
+
+        <!-- Podatoci STOMACNI-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="2"
+                android:text="Стомачни"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblStomacni"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <EditText
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@color/icons"
+                android:id="@+id/txtStomacni"
+                android:maxLines="1"
+                android:hint="n" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="normal|bold"
+                android:hint="____"
+                android:id="@+id/lblPoeniStomacni" />
+
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblNormaStomacni"
+                android:layout_marginRight="5dip"
+                android:hint="____"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textStyle="normal|italic" />
+
+        </LinearLayout>
+
+        <!-- Podatoci TRCANJE-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="2"
+                android:text="Трчање"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblTrcanje"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <EditText
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTrcanje"
+                android:inputType="number"
+                android:background="@color/icons"
+                android:hint="mmss"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPoeniTrcanje"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:hint="____"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblNormaTrcanje"
+                android:layout_marginRight="5dip"
+                android:hint="____"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textStyle="normal|italic" />
+
+        </LinearLayout>
+
+        <!-- DIVAJDER -->
+        <LinearLayout
+            android:background="@color/colorDivider"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"></LinearLayout>
+    <!-- DIVAJDER empty big-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="16dip"></LinearLayout>
+        <!-- vkupno bodovi i prosek -->
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:text="Просек:"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblVkupno"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/colorPrimaryText" />
+
+            <TextView
+            android:layout_marginBottom="@dimen/activity_txt_results"
+            android:layout_marginTop="@dimen/activity_txt_results"
+            android:text="____"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblProsek"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="normal|bold"
+            android:textColor="@color/colorPrimaryText" />
+
+        </LinearLayout>
+        <!-- OCENA -->
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:text="Оцена:"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblOcena"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+            <TextView
+                android:layout_marginBottom="@dimen/activity_txt_results"
+                android:layout_marginTop="@dimen/activity_txt_results"
+                android:text="____"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblOcenaVrednost"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+        <!-- DIVAJDER -->
+        <LinearLayout
+            android:background="@color/colorDivider"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"></LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
