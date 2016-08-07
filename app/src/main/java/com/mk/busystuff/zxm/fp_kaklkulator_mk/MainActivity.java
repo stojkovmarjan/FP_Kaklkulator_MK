@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import java.math.BigDecimal;
-
+//PROBA PRVA REMOTE BRANCH
 public class MainActivity extends AppCompatActivity {
 
     Spinner cmbPol;
